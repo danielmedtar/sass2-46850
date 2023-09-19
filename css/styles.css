@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*PALETA DE COLORES*/
+/*CONDICIONALES*/
+body {
+  background-color: aquamarine;
+}
+
+/*BUCLES*/
+/*VARIABLE i = iteracion
+Se recomienda que la vuelta o iteracion se denomine i por buena práctica de programacion
+*/
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-1 {
+  width: 10%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-2 {
+  width: 20%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-3 {
+  width: 30%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-4 {
+  width: 40%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-5 {
+  width: 50%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-6 {
+  width: 60%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-7 {
+  width: 70%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-8 {
+  width: 80%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-9 {
+  width: 90%;
+}
+
+/*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+.col-10 {
+  width: 100%;
+}
+
+.bucles:nth-of-type(1) {
+  font-size: 19px;
+  background-color: #1a1a1a;
+}
+
+.bucles:nth-of-type(2) {
+  font-size: 19px;
+  background-color: #333333;
+}
+
+.bucles:nth-of-type(3) {
+  font-size: 19px;
+  background-color: #4d4d4d;
+}
+
+.bucles:nth-of-type(4) {
+  font-size: 19px;
+  background-color: #666666;
+}
+
+.bucles:nth-of-type(5) {
+  font-size: 19px;
+  background-color: gray;
+}
+
+.bucles:nth-of-type(6) {
+  font-size: 19px;
+  background-color: #999999;
+}
+
+.bucles:nth-of-type(7) {
+  font-size: 19px;
+  background-color: #b3b3b3;
+}
+
+.bucles:nth-of-type(8) {
+  font-size: 19px;
+  background-color: #cccccc;
+}
+
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.black {
+  color: black;
+}
+
+/*uno*/ /*dos*/ /*tres*/
+/*EL ORDEN DEL EACH IMPORTA. PORQUE USA ESE ORDEN PARA ORGANIZAR EL COMPORTAMIENTO DEL CODIGO*/
+.texto-grande {
+  font-size: 32px;
+}
+
+.texto-mediano {
+  font-size: 24px;
+}
+
+.texto-chico {
+  font-size: 18px;
+}
+
+/*Creamos el bucle para usar los valores del mapa*/
+/*PARA ESTE CASO TAMBIEN IMPORTA EL ORDEN*/
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--gmail {
+  background-color: #C25E30;
+}
+
+div {
+  background-color: #3673D9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 35px;
+}
+
+section {
+  text-align: center;
+}
+
+.boton, .boton--cancelar, .boton--aceptar {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+}
+
+.boton--aceptar {
+  background-color: green;
+  color: yellow;
+}
+
+.boton--cancelar {
+  background-color: red;
+  color: yellow;
+}
+
+/*MIXINS*/
+/*Sin argumentos*/
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Con argumentos*/
+.box {
+  height: 50px;
+  width: 500px;
+}
+
+/*USANDO MIXINS CON PARAMETROS*/
+.imagen1 {
+  height: 200px;
+  width: 200px;
+}
+
+.imagen2 {
+  height: 300px;
+  width: 400px;
+}
+
+/*CON CSS PURO*/
+.imagen3 {
+  width: 350px;
+  height: 150px;
+}
+
+/*# sourceMappingURL=styles.css.map */

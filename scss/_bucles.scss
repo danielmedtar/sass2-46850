@@ -1,0 +1,161 @@
+/*CONDICIONALES*/
+$fiesta: halloween;
+
+body {
+    @if $fiesta == pascuas {
+        background-color: pink;
+        color: #000;
+    } @else if $fiesta == padre {
+        background-color: blue;
+        color: white;
+    } @else if $fiesta == navidad {
+        background-color: red;
+        color: blue;
+    } @else {
+        background-color: $bg-body;
+    }
+}
+
+/*BUCLES*/
+/*VARIABLE i = iteracion
+Se recomienda que la vuelta o iteracion se denomine i por buena práctica de programacion
+*/
+
+//EJEMPLO DE LA DIAPOSITIVA
+@for $i from 1 through 10 {
+         /*me lea que ese valor de la variable i, se convierta en algo legible para CSS*/
+	.col-#{$i} {
+	    width: 10% * $i;
+	}
+}
+
+//EJEMPLO DEL PROFE
+@for $i from 1 through 8 {
+    .bucles:nth-of-type(#{$i}) {
+        font-size: 19px;
+        background-color: lighten(#000, $i * 10%);
+    }
+}
+
+//EACH = CADA
+// ejemplo diapo
+@each $color in "blue", "yellow", "black" {
+	.#{$color}{
+	    color: #{$color};
+	}
+}
+
+// EJEMPLO PROFE
+          /*uno*/        /*dos*/         /*tres*/
+$textos: "grande" 32px, "mediano" 24px, "chico" 18px;
+
+/*EL ORDEN DEL EACH IMPORTA. PORQUE USA ESE ORDEN PARA ORGANIZAR EL COMPORTAMIENTO DEL CODIGO*/
+@each $medida, $numero in $textos {
+    .texto-#{$medida} {
+        font-size: $numero;
+    }
+}
+
+//MAPS
+$redes: ( /*Declaramos nuestro mapa*/
+    twitter: #55acee,
+    facebook:  #3a5795,
+    gmail: #C25E30
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+/*PARA ESTE CASO TAMBIEN IMPORTA EL ORDEN*/
+@each $redSocial, $color in $redes {
+   .btn--#{$redSocial} {
+       background-color: $color;
+   }
+}
+
+//MAP GET (OBTENER DEL MAPA)
+$estilos: (
+  color-claro: #3673D9,
+  centro: center,
+  tFuente: 35px,
+  normales : 1rem
+);
+
+div {
+    background-color: map-get($estilos, color-claro);
+    text-align: map-get($estilos, centro);
+    padding: map-get($estilos, normales);
+    font-size: map-get($estilos, tFuente);
+}
+
+section {
+    text-align: map-get($estilos, centro);
+}
+
+//BUCLES, CONDICIONALES, EACH Y MAPAS NO SON OBLIGATORIOS DE APLICAR EN SUS PROYECTOS
+
+//EXTENDS Y MIXINS SI SON OBLIGATORIOS USAR PARA SUS PROYECTOS, TANTO EN LA PROXIMA ENTREGA COMO EN EL PROYECTO FINAL.
+
+//AL MENOS UNO DE CADA UNO
+
+//EXTEND = EXTENDER UN ESTILO
+// ES 100% SEMANTICO
+.boton {
+    width:200px;
+    height:50px;
+    text-align:center;
+    color:black;
+    border-radius:20px;
+}
+
+.boton--aceptar{
+    @extend .boton;
+    background-color:green;
+    color:yellow;
+}
+
+.boton--cancelar{
+    @extend .boton;
+    background-color:red;
+    color:yellow;
+}
+
+/*MIXINS*/
+/*Sin argumentos*/
+@mixin flex-column-center {
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.box {
+    @include flex-column-center;
+}
+
+#box2 {
+    @include flex-column-center;
+}
+
+/*Con argumentos*/
+@mixin sizes($ancho, $alto) {
+    height: $alto;
+    width: $ancho;
+ }
+
+ .box {
+    @include sizes(500px, 50px);
+ }
+
+ /*USANDO MIXINS CON PARAMETROS*/
+ .imagen1 {
+    @include sizes(200px, 200px);
+ }
+
+ .imagen2 {
+    @include sizes(400px, 300px);
+ }
+
+ /*CON CSS PURO*/
+ .imagen3 {
+    width: 350px;
+    height: 150px;
+ }
+ 
+
