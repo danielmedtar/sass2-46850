@@ -78,12 +78,12 @@ $estilos: (
   normales : 1rem
 );
 
-div {
-    background-color: map-get($estilos, color-claro);
-    text-align: map-get($estilos, centro);
-    padding: map-get($estilos, normales);
-    font-size: map-get($estilos, tFuente);
-}
+// div {
+//     background-color: map-get($estilos, color-claro);
+//     text-align: map-get($estilos, centro);
+//     padding: map-get($estilos, normales);
+//     font-size: map-get($estilos, tFuente);
+// }
 
 section {
     text-align: map-get($estilos, centro);

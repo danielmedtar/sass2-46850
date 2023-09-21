@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Animaciones</title>
+</head>
+<body>
+    <section>
+        <h1>Animaciones</h1>
+        <h2>Gradientes</h2>
+
+        <div class="animate__animated animate__bounce caja gradiente-lineal"></div>
+        <div class="caja gradiente-radial"></div>
+    </section>
+
+    <section>
+        <h2>Transformaciones</h2>
+        <div class="transformaciones">
+            <div class="caja translate"></div>
+            <div class="caja rotate animate__animated animate__bounce"></div>
+            <div class="caja scale"></div>
+            <div class="caja skew"></div>
+        </div>
+    </section>
+
+    <section data-aos="zoom-in-right">
+        <h2>Transiciones</h2>
+
+        <div class="caja transicion"></div>
+
+        <input type="text">
+    </section>
+
+    <section data-aos="zoom-in-right">
+        <h2>Keyframes</h2>
+        <div id="keyframe"></div>
+
+        <div class="caja-barra">
+            <div class="barra-progreso">
+                <div class="barra-rellena"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
+
+</body>
+</html>

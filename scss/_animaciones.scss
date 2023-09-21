@@ -1,0 +1,176 @@
+.caja {
+    width: 200px;
+    height: 200px;
+}
+
+.gradiente-lineal {
+    /*Los gradientes siempre se aplican con background-image*/
+    /*sino se le pone direccion, por defecto es to bottom*/
+    background-image: linear-gradient(black, rgba(239, 239, 177, 0));
+    margin-bottom: 40px;
+}
+
+.gradiente-radial {
+    // background-image: radial-gradient(ellipse, red, gold);
+
+    // background-image: radial-gradient(ellipse 150px 50px, lightgreen,darkslateblue);
+
+    /*gradiente mycolor space*/
+    background-image: radial-gradient(circle, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.transformaciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 140px;
+}
+
+.translate {
+    background-color: red;
+    transform: translate(10px, 30px);
+}
+
+/*deg = grados*/
+.rotate {
+    background-color: yellow;
+    transform: rotate(45deg);
+}
+
+/*Es solo numero, va sin unidad*/
+.scale {
+    background-color: green;
+    transition: all .8s;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+/*deg = grados*/
+.skew {
+    background-color: black;
+    transform: skew(20deg, 10deg);
+}
+
+/*TRANSICIONES*/
+/*En principio se declara la transicion en el elemento. Y luego en el estado que quieran (hover) colocan el cambio que realiza*/
+.transicion {
+    background-color: #051937;
+
+    transition: height 2s, width 5s;
+
+    &:hover {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+h2 {
+    transition: all .4s;
+
+    &:hover {
+        background-color: #051937;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: #f68b1e;
+    }
+}
+
+input {
+    margin-top: 30px;
+    width: 100px;
+    transition: width 1.5s;
+}
+input:focus {
+    width: 300px;
+}
+
+/*Keyframes*/
+#keyframe {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: un_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+@keyframes un_efecto {
+    0% { 
+        width: 100px; 
+    }
+    
+    10%{ 
+        width: 50px; 
+    }
+    
+    25% { 
+        width: 300px; 
+    }
+    
+    50%{
+        width: 200px;
+        background-color: red; 
+    }
+    75% { 
+        width: 300px;
+    }
+    
+    100%{ 
+        width: 100px;
+        background-color:green;
+    }
+ }
+
+ /*barra progreso*/
+ .caja-barra {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+ }
+
+ .barra-progreso {
+    width: 60%;
+    border: solid 1px black;
+    height: 20px;
+ }
+
+ .barra-rellena {
+    height: 20px;
+    width: 80%;
+    background-color: green;
+
+    animation: rellenando 3s;
+ }
+
+ @keyframes rellenando {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+ }
+
+ h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+ }
+ 
+ 
+ @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 
+ 
